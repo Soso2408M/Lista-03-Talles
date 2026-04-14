@@ -9,34 +9,34 @@
     <script>
 var nome = prompt("Nome do cliente:");
 
-var qtdParafusos = Number(prompt("Quantidade de parafusos:"));
-var qtdPorcas = Number(prompt("Quantidade de porcas:"));
-var qtdArruelas = Number(prompt("Quantidade de arruelas:"));
+var quantParafusos = parseFloat(prompt("Quantidade de parafusos:"));
+var quantPorcas = parseFloat(prompt("Quantidade de porcas:"));
+var quantArruelas = parseFloat(prompt("Quantidade de arruelas:"));
 
-var precoParafuso = Number(prompt("Preço unitário do parafuso:"));
-var precoPorca = Number(prompt("Preço unitário da porca:"));
-var precoArruela = Number(prompt("Preço unitário da arruela"));
+var precoParafuso = parseFloat(prompt("Preço unitário do parafuso:"));
+var precoPorca = parseFloat(prompt("Preço unitário da porca:"));
+var precoArruela = parseFloat(prompt("Preço unitário da arruela"));
 
-// totais sem desconto
-var totalParafuso = qtdParafusos * precoParafuso;
-var totalPorca = qtdPorcas * precoPorca;
-var totalArruela = qtdArruelas * precoArruela;
 
-// descontos
-var descParafuso = totalParafuso * 0.20;
-var descPorca = totalPorca * 0.10;
-var descArruela = totalArruela * 0.30;
+var totalParafuso = quantParafusos * precoParafuso;
+var totalPorca = quantPorcas * precoPorca;
+var totalArruela = quantArruelas * precoArruela;
 
-var totalDesconto = descParafuso + descPorca + descArruela;
+
+var desconto_Parafuso = totalParafuso * 0.20;
+var desconto_Porca = totalPorca * 0.10;
+var desconto_Arruela = totalArruela * 0.30;
+
+var totalDesconto = desconto_Parafuso + desconto_Porca + desconto_Arruela;
 
 var totalBruto = totalParafuso + totalPorca + totalArruela;
 var totalPagar = totalBruto - totalDesconto;
 
 document.write("Cliente: " + nome + "<br><br>");
 
-document.write("Parafusos: " + qtdParafusos + "<br>");
-document.write("Porcas: " + qtdPorcas + "<br>");
-document.write("Arruelas: " + qtdArruelas + "<br><br>");
+document.write("Parafusos: " + quantParafusos + "<br>");
+document.write("Porcas: " + quantPorcas + "<br>");
+document.write("Arruelas: " + quantArruelas + "<br><br>");
 
 document.write("Total de desconto: R$ " + totalDesconto + "<br>");
 document.write("Total a pagar: R$ " + totalPagar);

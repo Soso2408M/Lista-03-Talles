@@ -7,28 +7,37 @@
 </head>
 <body>
     <script>
-var nome = prompt("Digite o nome do Aluno:");
+var nome = prompt("Aluno:");
+var português = parseFloat(prompt("Digite a nota de português:"));
+var matemática = parseFloat(prompt("DIgite a nota em matemática:"));
+var conhecimentosgerais = parseFloat(prompt("Digite a nota de conhecimentosgerais:"));
+var total = português + matemática + conhecimentosgerais;
+var média= total / 3;
 
-var portugûes = Number(prompt("Nota de Português:"));
-var matemática = Number(prompt("Nota de Matemática:"));
-var  conhecimentosgerais = Number(prompt("Nota de Conhecimentos Gerais:"));
+document.write("O nome do aluno é:" + nome + "<br>");
 
-// média
-var média = (portugûes + matemática + conhecimentosgerais) / 3;
+document.write("Nota em Português: " + português + "<br>");
 
-// mostrar dados
-document.write("O nome da pessoa é:" + nome + "<br>");
-document.write("Português: " + portugûes + "<br>");
-document.write("Matemática: " + matemática + "<br>");
-document.write("Conhecimentos Gerais: " + conhecimentosgerais + "<br>");
+document.write("Nota em Matemática: " + matemática + "<br>");
+
+document.write("Nota em Conhecimentos Gerais: " + conhecimentosgerais + "<br>");
+
 document.write("Média: " + média.toFixed(2) + "<br>");
 
-// verificação
-if (média > 7 & portugûes >= 5 & matemática >= 5 & conhecimentosgerais >= 5) {
-    document.write("A situação deste aluno: Aprovado");
-} else {
-    document.write("A situação deste aluno: Reprovado");
-}
+if (média > 8){
+    if (português >= 10)
+        if (matemática >= 5){
+            if (conhecimentosgerais>=5) {
+            document.write("A situação deste aluno: Aprovado");
+            } else {
+            document.write("A situação deste aluno: Reprovado");
+            }
+        }else{
+            document.write("A situação do aluno é: Reprovado");
+            }
+        } else{
+            document.write("A situção do aluno é de:Reprovado");
+        }  
 </script>
 </body>
 </html>

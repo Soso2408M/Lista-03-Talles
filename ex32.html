@@ -6,14 +6,14 @@
 </head>
 <body>
     <script>
-        var n = parseFloat(prompt("Digite um número:"));
+        var numero = parseFloat(prompt("Digite um número:"));
 
-        if (n <= 10) {
-            document.write("F1");
-        } else if (n > 10 & n <= 12) {
-            document.write("F2");
+        if (numero <= 10) {
+            document.write("O valor de F1 é de:" +numero + "É maior ou igual a 10" + "<br>");
+        }if ( numero <= 100) {
+            document.write("O valor de F2 é de:" + numero + "<br>" + "É menor ou igual a 100" + "<br>");
         } else {
-            document.write("F3");
+            document.write("O valor de F3 é de:" + numero + "<br>");
         }
     </script>
 </body>
